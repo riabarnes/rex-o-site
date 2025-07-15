@@ -24,7 +24,6 @@ body {
 
 section {
   scroll-snap-align: start;
-  min-height: 100vh;
   width: 100%;
   padding: 6rem 2rem;
   display: flex;
@@ -32,8 +31,8 @@ section {
   justify-content: center;
   flex-direction: column;
   transition: transform 0.8s ease-in-out;
+  min-height: 100vh; /* Use min-height instead of fixed height */
 }
-
 nav {
   position: fixed;
   top: 0;
