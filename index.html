@@ -79,17 +79,28 @@
     &copy; 2025 REX-O Defence Systems. All Rights Reserved.
   </footer>
 
-  <script>
-    const faders = document.querySelectorAll('.fade');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('animate');
-        }
-      });
-    }, { threshold: 0.3 });
+ <script>
+  const sections = document.querySelectorAll("section");
+  const fadeItems = document.querySelectorAll(".fade");
 
-    faders.forEach(el => observer.observe(el));
-  </script>
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => sectionObserver.observe(section));
+  fadeItems.forEach(el => fadeObserver.observe(el));
+</script>
 </body>
 </html>
