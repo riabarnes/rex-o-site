@@ -24,7 +24,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 27, 68, 0.9);
+      background: rgba(0, 0, 40, 0.9);
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
@@ -36,80 +36,143 @@
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #55c7ff;
+      color: #87cefa;
     }
 
     section {
-      height: 100vh;
-      padding: 4rem 2rem;
+      min-height: 100vh;
+      padding: 5rem 2rem;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      background-size: cover;
-      background-position: center;
+      flex-direction: column;
     }
 
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80');
+      background: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
       text-align: center;
-      background-attachment: fixed;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      font-weight: 600;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      transform: translateY(-20px);
     }
 
     .hero p {
-      margin-top: 1rem;
       font-size: 1.25rem;
       color: #d0e6ff;
     }
 
-    .section-dark {
-      background: #021d4f;
+    .about {
+      background: #011b44;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      color: #79cdff;
+    .about-text {
+      flex: 1;
+      padding: 2rem;
     }
 
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.7;
+    .about-image {
+      flex: 1;
+      padding: 2rem;
+      text-align: right;
     }
 
-    ul {
-      margin-left: 1rem;
-    }
-
-    .media img, .media iframe {
+    .about-image img {
       max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #87cefa;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .features {
+      background: #4c4c4c;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      background: #616161;
+      padding: 1.5rem;
       border-radius: 8px;
-      margin-top: 1rem;
+    }
+
+    .feature-item img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .media {
+      background: #87cefa;
+      color: #000;
+    }
+
+    .media iframe,
+    .media img {
+      max-width: 90%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    .contact {
+      background: #000;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem 2rem;
+    }
+
+    .contact h2 {
+      flex: 1;
+      font-size: 2rem;
+      color: #87cefa;
+    }
+
+    .contact-center {
+      flex: 1;
+      text-align: center;
+    }
+
+    .contact-center p {
+      margin: 0.5rem 0;
+    }
+
+    .contact-right {
+      flex: 1;
+      text-align: right;
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #011634;
+      background: #111;
       color: #aaa;
-    }
-
-    @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#features">Features</a>
@@ -122,38 +185,58 @@
     <p>AI-Powered Kamikaze USVs for Modern Maritime Defence</p>
   </section>
 
-  <section class="section-dark" id="about">
-    <h2>About REX-O</h2>
-    <p>REX-O reimagines naval warfare with AI-powered, autonomous kamikaze unmanned surface vehicles designed for stealth, precision, and mission-specific deployment. Our systems integrate swarm coordination, real-time surveillance, and strike capability in a cost-efficient platform.</p>
-  </section>
-
-  <section class="section-dark" id="features">
-    <h2>Key Features</h2>
-    <ul>
-      <li>Autonomous Navigation with AI</li>
-      <li>Swarm Deployment Capabilities</li>
-      <li>Real-Time Coastal Surveillance</li>
-      <li>Precision Strike with Minimal Human Risk</li>
-      <li>Low-Cost, Scalable, and Rapidly Deployable</li>
-    </ul>
-  </section>
-
-  <section class="section-dark" id="media">
-    <h2>Media Gallery</h2>
-    <div class="media">
-      <img src="https://images.unsplash.com/photo-1581093588401-3e09f3a1eeda?auto=format&fit=crop&w=1200&q=80" alt="Prototype" />
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2 class="section-title">Discover REX-O</h2>
+      <p>REX-O revolutionizes naval warfare with autonomous, AI-powered kamikaze USVs that offer real-time surveillance, precision strikes, and swarm deployment. Designed for modern asymmetric warfare, they’re low-cost, scalable, and ideal for coastal defense.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1579961343985-81c39464a74c?auto=format&fit=crop&w=600&q=80" alt="REX-O System">
     </div>
   </section>
 
-  <section class="section-dark" id="contact">
+  <section class="features" id="features">
+    <h2 class="section-title">Core Capabilities</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/robot-2.png" alt="AI Navigation">
+        <p>AI-Powered Navigation</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/group-objects.png" alt="Swarm">
+        <p>Swarm Coordination</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/video.png" alt="Surveillance">
+        <p>Live Surveillance</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/crosshair.png" alt="Strike">
+        <p>Precision Strike</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="media" id="media">
+    <h2 class="section-title">Media Gallery</h2>
+    <img src="https://images.unsplash.com/photo-1581093588401-3e09f3a1eeda?auto=format&fit=crop&w=1200&q=80" alt="Prototype" />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p>Email: contact@rexodefence.in</p>
-    <p>We’re open to defence partnerships, innovation pilots, and institutional collaborations.</p>
+    <div class="contact-center">
+      <p>Email: contact@rexodefence.in</p>
+      <p>Phone: +91-9876543210</p>
+    </div>
+    <div class="contact-right">
+      <p>We’re open to defence partnerships, innovation pilots, and institutional collaborations.</p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 REX-O Defence Systems. All Rights Reserved.
   </footer>
+
 </body>
 </html>
