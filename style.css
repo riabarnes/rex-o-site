@@ -126,6 +126,7 @@ nav a {
 }
 
 .features {
+  padding-top: 6rem;
   background: var(--light-grey);
   color: #000;
   text-align: center;
@@ -136,10 +137,17 @@ nav a {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
-  padding: 2rem 0;
+  padding: 4rem 0;
   margin-bottom: 3rem;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr; 
+  }
 }
 
 .feature-item {
