@@ -21,7 +21,6 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
-
 section {
   scroll-snap-align: start;
   height: 100vh;
@@ -31,7 +30,13 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: transform 0.8s ease-in-out;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 nav {
