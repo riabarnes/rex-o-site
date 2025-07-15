@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>REX-O Defence Systems</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#features">Features</a>
@@ -86,9 +87,7 @@
           entry.target.classList.add('show');
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
       section.classList.add('hidden');
@@ -97,4 +96,3 @@
   </script>
 </body>
 </html>
-      
