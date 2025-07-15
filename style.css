@@ -24,9 +24,9 @@ body {
 
 section {
   scroll-snap-align: start;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,7 @@ nav a {
 .hero {
   background: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
   color: white;
+  justify-content: center;
   text-align: center;
 }
 
@@ -70,7 +71,7 @@ nav a {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: var(--sky-blue);
   text-transform: uppercase;
@@ -81,50 +82,60 @@ nav a {
 .about {
   background: var(--dark-blue);
   color: white;
-  flex-direction: column;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.about-text, .about-image {
-  max-width: 1200px;
-  width: 100%;
-  padding: 1rem;
+.about-text {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.about-image {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-image img {
   width: 100%;
   border-radius: 10px;
-  margin-top: 1.5rem;
 }
 
 .features {
   background: var(--light-grey);
   color: #000;
   text-align: center;
-  padding: 6rem 2rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
 }
 
 .feature-item {
-  padding: 1.5rem;
+  padding: 2rem;
   background: var(--light-blue);
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .feature-item img {
@@ -151,10 +162,10 @@ nav a {
   background: var(--light-blue);
   color: #000;
   text-align: center;
-  padding: 6rem 2rem;
 }
 
-.media img, .media iframe {
+.media img,
+.media iframe {
   max-width: 80%;
   margin-top: 1.5rem;
   border-radius: 10px;
@@ -163,11 +174,13 @@ nav a {
 .contact {
   background: var(--black);
   color: white;
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
   padding: 3rem 2rem;
-  min-height: auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 .contact-left,
@@ -198,7 +211,7 @@ footer {
   padding: 1rem;
 }
 
-/* Animation */
+/* Animation trigger */
 .fade {
   opacity: 0;
   transform: translateY(40px);
