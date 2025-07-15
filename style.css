@@ -111,35 +111,35 @@ nav a {
   background: var(--light-grey);
   color: #000;
   text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 6rem 2rem;
+  min-height: 120vh; /* Make it tall enough to fit all items without overlap */
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Show 2 icons per row */
   gap: 2rem;
+  justify-content: center;
   margin-top: 2rem;
-  width: 100%;
-  max-width: 1000px;
+  padding-bottom: 4rem;
 }
 
 .feature-item {
-  padding: 2rem;
+  padding: 1.5rem;
   background: var(--light-blue);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 
-.feature-item:hover {
-  transform: scale(1.05);
-}
-
 .feature-item img {
   width: 60px;
   margin-bottom: 1rem;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
 }
 
 .feature-desc {
@@ -152,6 +152,7 @@ nav a {
 .feature-item:hover .feature-desc {
   display: block;
 }
+
 
 /* Media Section */
 .media {
