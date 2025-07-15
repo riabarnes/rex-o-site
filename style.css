@@ -24,6 +24,7 @@ body {
 
 section {
   scroll-snap-align: start;
+  min-height: 100vh;
   width: 100%;
   padding: 6rem 2rem;
   display: flex;
@@ -31,8 +32,8 @@ section {
   justify-content: center;
   flex-direction: column;
   transition: transform 0.8s ease-in-out;
-  min-height: 100vh; /* Use min-height instead of fixed height */
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -55,7 +56,6 @@ nav a {
   background: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
   color: white;
   text-align: center;
-  justify-content: center;
 }
 
 .hero h1 {
@@ -70,57 +70,53 @@ nav a {
 }
 
 .section-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--sky-blue);
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   letter-spacing: 1px;
 }
 
-/* About Section */
 .about {
   background: var(--dark-blue);
   color: white;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 }
 
 .about-text, .about-image {
-  flex: 1;
-  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
 }
 
-.about-text .section-title {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 3.5rem;
+.about-text p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .about-image img {
   width: 100%;
   border-radius: 10px;
+  margin-top: 1.5rem;
 }
 
-/* Features Section */
 .features {
   background: var(--light-grey);
   color: #000;
   text-align: center;
   padding: 6rem 2rem;
-  min-height: 120vh; /* Make it tall enough to fit all items without overlap */
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Show 2 icons per row */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-  padding-bottom: 4rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .feature-item {
@@ -129,7 +125,6 @@ nav a {
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
-  position: relative;
 }
 
 .feature-item img {
@@ -152,8 +147,6 @@ nav a {
   display: block;
 }
 
-
-/* Media Section */
 .media {
   background: var(--light-blue);
   color: #000;
@@ -167,15 +160,14 @@ nav a {
   border-radius: 10px;
 }
 
-/* Contact Section */
 .contact {
   background: var(--black);
   color: white;
-  flex-direction: row;
-  justify-content: space-between;
+  display: flex;
   flex-wrap: wrap;
-  height: auto;
+  justify-content: space-between;
   padding: 3rem 2rem;
+  min-height: auto;
 }
 
 .contact-left,
@@ -204,4 +196,16 @@ footer {
   color: #aaa;
   text-align: center;
   padding: 1rem;
+}
+
+/* Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
