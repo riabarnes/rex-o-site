@@ -2,76 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>REX-O Defence Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      transition: background 1s ease-in-out;
+    }
+
+    .section-dark {
+      background: rgba(0,0,0,0.85);
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80');
+      text-align: center;
+      padding-top: 6rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: #ccc;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      color: #00e0ff;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      padding: 1rem 2rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    .media img, .media iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #000;
+      color: #aaa;
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#applications">Applications</a></li>
-      <li><a href="#media">Media</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <header class="hero">
-    <div class="hero-text">
-      <h1>REX-O Defence Systems</h1>
-      <p>AI-powered Kamikaze USVs for Modern Maritime Warfare</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </header>
-
-  <section id="about" class="section">
-    <h2>About REX-O</h2>
-    <p>REX-O Defence Systems is pioneering the future of naval warfare with our AI-powered, expendable kamikaze Unmanned Surface Vehicles (USVs). Designed for stealth, autonomy, and scalability, REX-O platforms combine real-time surveillance, precision strike capability, and swarm coordination to excel in modern asymmetric warfare and coastal defense scenarios.</p>
+  <section class="hero" id="hero">
+    <h1>REX-O Defence Systems</h1>
+    <p>AI-Powered Kamikaze USVs for Modern Maritime Defence</p>
   </section>
 
-  <section id="features" class="section">
+  <section class="section-dark" id="about">
+    <h2>About REX-O</h2>
+    <p>REX-O reimagines naval warfare with AI-powered, autonomous kamikaze unmanned surface vehicles designed for stealth, precision, and mission-specific deployment. Our systems integrate swarm coordination, real-time surveillance, and strike capability in a cost-efficient platform.</p>
+  </section>
+
+  <section class="section-dark" id="features">
     <h2>Key Features</h2>
     <ul>
-      <li>Stealth-mode deployment in hostile zones</li>
-      <li>Real-time autonomous navigation</li>
-      <li>AI-driven mission-specific targeting</li>
-      <li>Swarm coordination for distributed impact</li>
-      <li>Low-cost, high-efficiency platform</li>
+      <li>Autonomous Navigation with AI</li>
+      <li>Swarm Deployment Capabilities</li>
+      <li>Real-Time Coastal Surveillance</li>
+      <li>Precision Strike with Minimal Human Risk</li>
+      <li>Low-Cost, Scalable, and Rapidly Deployable</li>
     </ul>
   </section>
 
-  <section id="applications" class="section">
-    <h2>Applications</h2>
-    <p>REX-O systems are ideal for:</p>
-    <ul>
-      <li>Coastal surveillance & maritime border control</li>
-      <li>Risk-free patrol in conflict zones</li>
-      <li>Special naval operations requiring autonomy</li>
-      <li>High-speed strategic strike missions</li>
-    </ul>
-  </section>
-
-  <section id="media" class="section">
-    <h2>Gallery & Videos</h2>
-    <div class="gallery">
-      <img src="placeholder1.jpg" alt="Prototype image" />
-      <img src="placeholder2.jpg" alt="Swarm demo" />
+  <section class="section-dark" id="media">
+    <h2>Media Gallery</h2>
+    <div class="media">
+      <img src="https://images.unsplash.com/photo-1581093588401-3e09f3a1eeda?auto=format&fit=crop&w=1200&q=80" alt="Prototype" />
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section class="section-dark" id="contact">
     <h2>Contact Us</h2>
-    <p>For partnerships, media inquiries, or demo requests:</p>
-    <p><strong>Email:</strong> info@rexodefence.in</p>
+    <p>Email: contact@rexodefence.in</p>
+    <p>We’re open to defence partnerships, innovation pilots, and institutional collaborations.</p>
   </section>
 
   <footer>
-    <p>© 2025 REX-O Defence Systems</p>
+    &copy; 2025 REX-O Defence Systems. All Rights Reserved.
   </footer>
-
 </body>
 </html>
