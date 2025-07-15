@@ -6,222 +6,6 @@
   <title>REX-O Defence Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    :root {
-      --dark-blue: #001b44;
-      --sky-blue: #87cefa;
-      --light-grey: #f0f0f0;
-      --black: #000;
-      --light-blue: #d0ecff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      overflow-y: scroll;
-      height: 100vh;
-      scroll-snap-type: y mandatory;
-    }
-
-    section {
-      scroll-snap-align: start;
-      height: 100vh;
-      width: 100%;
-      padding: 6rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transition: transform 0.8s ease-in-out;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: var(--dark-blue);
-      padding: 1rem 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 600;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-
-    .hero p {
-      font-size: 1.4rem;
-      color: #d0e6ff;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .section-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--sky-blue);
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      letter-spacing: 1px;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .about {
-      background: var(--dark-blue);
-      color: white;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .about-text, .about-image {
-      flex: 1;
-      padding: 2rem;
-    }
-
-    .about-text p, .about-image img {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .features {
-      background: var(--light-grey);
-      color: #000;
-      text-align: center;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 1rem 0 3rem;
-    }
-
-    .feature-item {
-      padding: 2rem;
-      background: var(--light-blue);
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, background 0.3s ease;
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .feature-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature-item img {
-      width: 60px;
-      margin-bottom: 1rem;
-    }
-
-    .feature-item p {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .feature-desc {
-      display: none;
-      font-size: 0.95rem;
-      margin-top: 0.6rem;
-      color: #333;
-    }
-
-    .feature-item:hover .feature-desc {
-      display: block;
-    }
-
-    .media {
-      background: var(--light-blue);
-      color: #000;
-      text-align: center;
-    }
-
-    .media img, .media iframe {
-      max-width: 80%;
-      margin-top: 1.5rem;
-      border-radius: 10px;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .contact {
-      background: var(--black);
-      color: white;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      height: auto;
-      padding: 3rem 2rem;
-    }
-
-    .contact-left, .contact-center, .contact-right {
-      flex: 1;
-      padding: 1rem;
-    }
-
-    .contact h2 {
-      font-size: 2rem;
-      color: var(--sky-blue);
-    }
-
-    .contact-center p {
-      margin: 0.5rem 0;
-      text-align: center;
-    }
-
-    .contact-right {
-      text-align: right;
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .animate {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-      transition: all 1s ease;
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -237,8 +21,8 @@
   </section>
 
   <section class="about" id="about">
-    <h2 class="section-title fade">About REX-O</h2>
     <div class="about-text">
+      <h2 class="section-title">About REX-O</h2>
       <p class="fade">REX-O revolutionizes naval warfare with autonomous, AI-powered kamikaze USVs that offer real-time surveillance, precision strikes, and swarm deployment. Designed for modern asymmetric warfare, they’re low-cost, scalable, and ideal for coastal defense.</p>
     </div>
     <div class="about-image">
@@ -247,34 +31,33 @@
   </section>
 
   <section class="features" id="features">
-    <h2 class="section-title fade">Features</h2>
+    <h2 class="section-title">Features</h2>
     <div class="feature-grid">
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/robot-2.png" alt="AI"/>
         <p>AI Navigation</p>
-        <div class="feature-desc">Real-time pathfinding and obstacle avoidance.</div>
+        <div class="feature-desc">Intelligent pathfinding & obstacle avoidance using real-time AI.</div>
       </div>
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/group-objects.png" alt="Swarm"/>
         <p>Swarm Coordination</p>
-        <div class="feature-desc">Coordinated missions with multiple units.</div>
+        <div class="feature-desc">Multiple USVs operate in synchrony for strategic advantage.</div>
       </div>
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/video.png" alt="Surveillance"/>
         <p>Live Surveillance</p>
-        <div class="feature-desc">High-definition tactical streaming.</div>
+        <div class="feature-desc">High-definition real-time monitoring of target zones.</div>
       </div>
       <div class="feature-item fade">
-        <img src="https://img.icons8.com/ios-filled/50/crosshair.png" alt="Strike"/>
+        <img src="https://img.icons8.com/ios-filled/50/missile.png" alt="Missile"/>
         <p>Precision Strike</p>
-        <img src="https://img.icons8.com/ios-filled/50/missile.png" alt="Missile Icon" />
-        <div class="feature-desc">Autonomous target execution and guidance.</div>
+        <div class="feature-desc">Autonomous target locking and low-collateral execution.</div>
       </div>
     </div>
   </section>
 
   <section class="media" id="media">
-    <h2 class="section-title fade">Media Gallery</h2>
+    <h2 class="section-title">Media Gallery</h2>
     <img class="fade" src="https://images.unsplash.com/photo-1581093588401-3e09f3a1eeda?auto=format&fit=crop&w=1200&q=80" alt="Prototype"/>
     <iframe class="fade" width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
   </section>
@@ -304,7 +87,7 @@
           entry.target.classList.add('animate');
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.3 });
 
     faders.forEach(el => observer.observe(el));
   </script>
