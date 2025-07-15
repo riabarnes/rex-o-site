@@ -11,7 +11,7 @@
       --sky-blue: #87cefa;
       --light-grey: #f0f0f0;
       --black: #000;
-      --light-blue: #e0f7ff;
+      --light-blue: #d0ecff;
     }
 
     * {
@@ -35,7 +35,7 @@
       scroll-snap-align: start;
       height: 100vh;
       width: 100%;
-      padding: 5rem 2rem;
+      padding: 6rem 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,23 +71,23 @@
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      transform: translateY(-20px);
       opacity: 0;
+      transform: translateY(-20px);
     }
 
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: #d0e6ff;
       opacity: 0;
       transform: translateY(20px);
     }
 
     .section-title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
       color: var(--sky-blue);
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       letter-spacing: 1px;
       opacity: 0;
       transform: translateY(30px);
@@ -126,22 +126,43 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
+      padding: 1rem 0 3rem;
     }
 
     .feature-item {
-      padding: 1.5rem;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 2rem;
+      background: var(--light-blue);
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.6s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
     }
 
     .feature-item img {
-      width: 50px;
+      width: 60px;
       margin-bottom: 1rem;
+    }
+
+    .feature-item p {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .feature-desc {
+      display: none;
+      font-size: 0.95rem;
+      margin-top: 0.6rem;
+      color: #333;
+    }
+
+    .feature-item:hover .feature-desc {
+      display: block;
     }
 
     .media {
@@ -163,10 +184,9 @@
       color: white;
       flex-direction: row;
       justify-content: space-between;
-      padding: 2rem 2rem;
       flex-wrap: wrap;
       height: auto;
-      min-height: 50vh;
+      padding: 3rem 2rem;
     }
 
     .contact-left, .contact-center, .contact-right {
@@ -195,7 +215,6 @@
       padding: 1rem;
     }
 
-    /* Animation Trigger */
     .animate {
       opacity: 1 !important;
       transform: translateY(0) !important;
@@ -217,8 +236,8 @@
   </section>
 
   <section class="about" id="about">
+    <h2 class="section-title fade">About REX-O</h2>
     <div class="about-text">
-      <h2 class="section-title">About REX-O</h2>
       <p class="fade">REX-O revolutionizes naval warfare with autonomous, AI-powered kamikaze USVs that offer real-time surveillance, precision strikes, and swarm deployment. Designed for modern asymmetric warfare, they’re low-cost, scalable, and ideal for coastal defense.</p>
     </div>
     <div class="about-image">
@@ -227,29 +246,33 @@
   </section>
 
   <section class="features" id="features">
-    <h2 class="section-title">Features</h2>
+    <h2 class="section-title fade">Features</h2>
     <div class="feature-grid">
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/robot-2.png" alt="AI"/>
-        <p>AI-Powered Navigation</p>
+        <p>AI Navigation</p>
+        <div class="feature-desc">Real-time pathfinding and obstacle avoidance.</div>
       </div>
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/group-objects.png" alt="Swarm"/>
         <p>Swarm Coordination</p>
+        <div class="feature-desc">Coordinated missions with multiple units.</div>
       </div>
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/video.png" alt="Surveillance"/>
         <p>Live Surveillance</p>
+        <div class="feature-desc">High-definition tactical streaming.</div>
       </div>
       <div class="feature-item fade">
         <img src="https://img.icons8.com/ios-filled/50/crosshair.png" alt="Strike"/>
         <p>Precision Strike</p>
+        <div class="feature-desc">Autonomous target execution and guidance.</div>
       </div>
     </div>
   </section>
 
   <section class="media" id="media">
-    <h2 class="section-title">Media Gallery</h2>
+    <h2 class="section-title fade">Media Gallery</h2>
     <img class="fade" src="https://images.unsplash.com/photo-1581093588401-3e09f3a1eeda?auto=format&fit=crop&w=1200&q=80" alt="Prototype"/>
     <iframe class="fade" width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
   </section>
@@ -279,7 +302,7 @@
           entry.target.classList.add('animate');
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     faders.forEach(el => observer.observe(el));
   </script>
