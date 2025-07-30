@@ -118,7 +118,17 @@ nav a {
 
 .about-image img {
   width: 100%;
-  border-radius: 10px;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-image img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
 }
 
 .features {
