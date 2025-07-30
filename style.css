@@ -80,10 +80,12 @@ nav a {
   font-weight: 700;
   color: var(--sky-blue);
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   letter-spacing: 1px;
 }
-
+.media-row {
+  margin: 10px 0;
+}
 .about {
   background: var(--dark-blue);
   color: white;
