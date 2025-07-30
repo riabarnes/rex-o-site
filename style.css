@@ -189,7 +189,9 @@ nav a {
 .media {
   background: var(--light-blue);
   color: #000;
-  text-align: center;
+  text-align: center
+  padding: 60px 20px;
+  overflow: hidden;
 }
 
 .media img,
