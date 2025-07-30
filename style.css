@@ -176,9 +176,12 @@ nav a {
   border-radius: 10px;
 }
 
-.media-row iframe {
-  width: 90%;
-  max-width: 640px;
+.media-row.video-row {
+  justify-content: center;
+}
+
+.media-row.video-row iframe {
+  width: 640px;
   height: 360px;
   border-radius: 10px;
   background: #000;
