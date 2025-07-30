@@ -126,11 +126,8 @@ nav a {
     text-align: center;
     gap: 20px;
   }
-@media (min-width: 768px) {
-  .about-image img {
-    max-width: 550px; /* increase size on laptop */
-  }
   .about-text, .about-image {
+    max-width: 550px;
     width: 100%;
   }
   @media (max-width: 600px) {
