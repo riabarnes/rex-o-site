@@ -88,46 +88,48 @@ nav a {
   margin: 10px 0;
 }
 .about {
-  background: var(--dark-blue);
-  color: white;
-  flex-direction: row;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  padding: 60px 10%;
+  background-color: #002244;
+  color: white;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
 }
 
 .about-text {
-  flex: 1;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.about-text p {
-  margin-top: 1.5rem;
+  flex: 1 1 400px;
+  min-width: 280px;
 }
 
 .about-image {
-  flex: 1;
-  padding: 2rem;
+  flex: 1 1 400px;
+  min-width: 280px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .about-image img {
   width: 100%;
   max-width: 500px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
-  .about-image img {
-    max-width: 90%;
-    margin-top: 20px;
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    padding-top: 10px;
+  }
+
+  .about-text {
+    padding-bottom: 20px;
   }
 }
 
