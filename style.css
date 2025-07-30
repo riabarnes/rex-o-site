@@ -130,6 +130,11 @@ nav a {
   .about-text, .about-image {
     width: 100%;
   }
+  @media (max-width: 600px) {
+  .about-heading {
+    font-size: 1.8rem; /* adjust smaller as needed */
+  }
+}
 }
 .features {
   background: var(--light-grey);
