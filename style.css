@@ -87,6 +87,7 @@ nav a {
 .media-row {
   margin: 10px 0;
 }
+
 .about {
   display: flex;
   align-items: center;
@@ -94,21 +95,21 @@ nav a {
   padding: 60px 10%;
   background-color: #002244;
   color: white;
-  flex-wrap: wrap; /* allow stacking on smaller screens */
+  flex-wrap: nowrap;
+  gap: 40px;
 }
 
 .about-text {
-  flex: 1 1 400px;
+  flex: 1;
   min-width: 280px;
 }
 
 .about-image {
-  flex: 1 1 400px;
+  flex: 1;
   min-width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
 }
 
 .about-image img {
@@ -118,21 +119,18 @@ nav a {
   border-radius: 10px;
 }
 
+/* Responsive stack on mobile */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
-  .about-image {
-    padding-top: 10px;
-  }
-
-  .about-text {
-    padding-bottom: 20px;
+  .about-text, .about-image {
+    width: 100%;
   }
 }
-
 .features {
   background: var(--light-grey);
   color: #000;
